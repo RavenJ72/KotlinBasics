@@ -1,4 +1,5 @@
-import java.lang.Integer.min
+package basicDataOperations
+
 import javax.management.InvalidAttributeValueException
 import kotlin.math.abs
 import kotlin.text.toInt as toInt
@@ -75,7 +76,6 @@ fun main(args: Array<String>) {
             x%2==0 && y%2==0 -> true
             else -> false
         }
-//        return x%2==0 && y%2==0;
     }
 
     println(variableChecking(2, 0))
