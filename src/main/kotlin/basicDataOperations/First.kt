@@ -4,7 +4,7 @@ fun main(args: Array<String>) {
 
     // Практическая №1
     fun printDifferentValues() {
-        println("Иван")
+        println("\"Иван\"")
         println(35)
         println(true)
     }
@@ -18,10 +18,10 @@ fun main(args: Array<String>) {
         println(stringValue)
     }
 
-    fun numberDivider(fullNumber: Int): List<String> {
-        return fullNumber.toString().trim().split("").toList()
+    fun numberDivider(){
+        println(readLine()?.map { it }.toString().dropLast(1).drop(1))
     }
-    //println(numberDivider(123).forEach { e-> println(e) })
+//    numberDivider()
 
     fun daysToFullDataConverter(weeksCounter: Int): String {
         println(weeksCounter / 365)
@@ -29,7 +29,7 @@ fun main(args: Array<String>) {
         println(weeksCounter % 365 % 7)
         return "Лет: " + weeksCounter / 365 + ",недель: " + weeksCounter % 365 / 7 + ",дней: 3"
     }
-    //println(daysToFullDataConverter(2642))
+//    println(daysToFullDataConverter(2642))
 
 
     fun numberManipulations(number: Int): Int {

@@ -39,12 +39,13 @@ fun main(args: Array<String>) {
             5 -> println("Пятница")
             6 -> println("Суббота")
             7 -> println("Воскресенье")
+            else -> println("Четврегянтница")
         }
     }
 
 
     fun findingTheAverageNumber(x:Int,y:Int,z:Int): Int{
-        if(x==y || x==z || y==z){
+        if((x==y || x==z || y==z)){
             throw InvalidAttributeValueException("Ошибка")
         }else{
             return when{
@@ -54,7 +55,6 @@ fun main(args: Array<String>) {
             }
         }
     }
-
 
 //    println(findingTheAverageNumber(1, 2, 3))
 

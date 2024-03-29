@@ -2,13 +2,20 @@ package arraysOfData
 
 import kotlin.math.max
 import kotlin.math.min
+import kotlin.random.Random
 
 fun main(args: Array<String>) {
 
     fun printArrayOfRange(a:Int,b:Int){
         println(IntArray(max(a, b) - min(a, b) + 1) { i -> i + a }.contentToString())
     }
-//    printArrayOfRange(5,8)
+    //printArrayOfRange(5,8)
+//    val fn = Random.nextInt(1,20)
+//    val sn = Random.nextInt(1,20)
+//    printArrayOfRange(fn,sn)
+
+
+
 
     fun printMutableListAfterSomeOperations(){
         val mutableList: MutableList<Int> = mutableListOf(1,2,3,4,5)
@@ -78,7 +85,7 @@ fun main(args: Array<String>) {
         val array = readLine()?.split(",")?.map{it.toInt()}?.let {selectionSort(it.toMutableList())}
         println(array?.filter { it > array.average() }?.toList())
     }
-//    getAllNumberOverTheAverageInArray()
+    getAllNumberOverTheAverageInArray()
 
 
 

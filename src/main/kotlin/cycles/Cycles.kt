@@ -1,5 +1,6 @@
 package cycles
 
+import kotlin.math.sqrt
 import kotlin.random.Random
 
 
@@ -29,21 +30,23 @@ fun main() {
     //simpleNumberGuessingGame()
 
 
-    fun printNumberDividers() {
-        println("Введите число, делители, которого нужно получить.")
-
-        var dividers = ""
-        val number: Int = readLine()?.toInt() ?: 0
-
-        for (i in 1..number) {
-
-            if (number % i == 0) dividers += "$i,"
-
+    fun findDivisors(number: Int) {
+        val divisors = mutableListOf(1)
+        var i = 2
+        while (i * i <= number) {
+            if (number % i == 0) {
+                divisors.add(i)
+                divisors.add(number / i)
+            }
+            i++
         }
-        println(dividers.dropLast(1))
+        if (i * i > number && number > 1) {
+            divisors.add(number)
+        }
+        println(divisors.sorted().toString().drop(1).dropLast(1))
     }
+//    findDivisors(45)
 
-    //printNumberDividers()
 
 
     fun splitEvenOddDigits() {
@@ -68,7 +71,7 @@ fun main() {
         for (i in 4..100 step 4) sum += i
         println(sum)
     }
-    //printNumbersSum()
+    printNumbersSum()
 
 
     fun findingSum() {
@@ -85,7 +88,7 @@ fun main() {
         println(sum)
     }
 
-    findingSum()
+//    findingSum()
 
 
 
